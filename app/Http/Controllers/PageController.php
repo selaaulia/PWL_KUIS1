@@ -11,7 +11,7 @@ class PageController extends Controller
     }
 
     public function product() {
-        return view('product', ['title' => '- Products Page', 'status' => 'active']);
+        return view('product', ['products' => Product::product(), 'title' => '- Products Page', 'status' => 'active']);
     }
 
     public function about() {
