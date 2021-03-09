@@ -14,11 +14,21 @@ class MemberSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('members')->insert([
-            'name'=> 'Johnny William',
-            'job' => 'CO-Founder',
-            'info' => 'Dia adalah seorang CO-Founder sixteen clothing',
-            'image' => 'assets/images/team_01.jpg'
+
+        $name = ['Johnny William', 'Karry Pitcher', 'Michael Soft','Mary Cool','George =Walker','Kate Town'];
+        $job = ['Co-Founder', 'Product Expert', 'Chief Marketing', 'Product Specialist', 'Product Photographer', 'Geneneral Manager'];
+        $info = ['Johnny William bukan Johnny nct', 'Karry Pitcher Product Expert', 'Michael Soft Chief Marketing', 'Mary Cool bukan Marry,',
+                    'George Malker bukan Alan Walker', 'Kate Town bukan Kate Melodlan'];
+        $image = ['assets/images/team_01.jpg', 'assets/images/team_02.jpg', 'assets/images/team_03.jpg',
+                'assets/images/team_04.jpg', 'assets/images/team_05.jpg', 'assets/images/team_06.jpg'];
+        
+        for($i=0; $i<6; $i++){
+            DB::table('members')->insert([
+                'name'=> $name[$i],
+                'job' => $job[$i],
+                'info' => $info[$i],
+                'image' => $image[$i]
         ]);
+        }
     }
 }
