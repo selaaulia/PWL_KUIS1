@@ -64,6 +64,17 @@ https://templatemo.com/tm-546-sixteen-clothing
               <li class="nav-item @yield('statusContact')">
                 <a class="nav-link" href="/contact">Contact Us</a>
               </li>
+              <li class="nav-item @yield('statusMenu')">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Menu
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="/supplier">Supplier</a>
+                    <a class="dropdown-item" href="/customer">Customer</a>
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
         </div>

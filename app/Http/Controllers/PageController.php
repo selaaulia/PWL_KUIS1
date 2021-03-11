@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Member;
+use App\Models\Supplier;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -23,4 +24,8 @@ class PageController extends Controller
     public function contact() {
         return view('contact', ['title' => '- Contact Page', 'status' => 'active']);
     }
+    public function supplier() {
+        return view('supplier', ['suppliers' => Supplier::supplier(), 'title' => '- Supplier Page', 'status' => 'active']);
+    }
+    
 }

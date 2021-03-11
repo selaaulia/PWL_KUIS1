@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Member;
 use App\Models\Product;
+use App\Models\Supplier;
 
 
 class DatabaseSeeder extends Seeder
@@ -20,8 +21,10 @@ class DatabaseSeeder extends Seeder
         $this->call([
             ProductSeeder::class,
             MemberSeeder::class,
+            SupplierSeeder::class,
         ]);
-
+        Supplier::factory(10)->create();
+        Member::factory(12)->create();
         Product::factory(18)->create();
     }
 }

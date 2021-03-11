@@ -5,11 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Member extends Model
+class Supplier extends Model
 {
     use HasFactory;
-
-    public static function index(){
-        return Member::paginate(6);
+    public static function supplier(){
+        return Supplier::paginate(6);
     }
 }

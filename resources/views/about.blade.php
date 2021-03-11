@@ -87,6 +87,15 @@
             </div>
             @endforeach
           </div>
+          <br>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center">
+                <li class="page-item"><a class="page-link" href="/about?page=1">1</a></li>
+                <li class="page-item"><a class="page-link" href="/about?page=2">2</a></li>
+                <li class="page-item"><a class="page-link" href="/about?page=3">3</a></li>
+              </ul>
+            </nav>
+          <br><br>
         </div>
       </div>
   
