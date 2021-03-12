@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Member;
 use App\Models\Product;
 use App\Models\Supplier;
+use App\Models\Customer;
 
 
 class DatabaseSeeder extends Seeder
@@ -22,9 +23,11 @@ class DatabaseSeeder extends Seeder
             ProductSeeder::class,
             MemberSeeder::class,
             SupplierSeeder::class,
+            CustomerSeeder::class,
         ]);
         Supplier::factory(10)->create();
         Member::factory(12)->create();
         Product::factory(18)->create();
+        Customer::factory(17)->create();
     }
 }

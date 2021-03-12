@@ -23,3 +23,4 @@ Route::get('/product', [PageController::class, 'product']);
 Route::get('/about', [PageController::class, 'about']);
 Route::get('/contact', [PageController::class, 'contact']);
 Route::get('/supplier', [PageController::class, 'supplier']);
+Route::get('/customer', [PageController::class, 'customer']);

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Member;
 use App\Models\Supplier;
+use App\Models\Customer;
+
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -26,6 +28,10 @@ class PageController extends Controller
     }
     public function supplier() {
         return view('supplier', ['suppliers' => Supplier::supplier(), 'title' => '- Supplier Page', 'status' => 'active']);
+    }
+
+    public function customer() {
+        return view('customer', ['customers' => Customer::customer(), 'title' => '- Customer Page', 'status' => 'active']);
     }
     
 }
